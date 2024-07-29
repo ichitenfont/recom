@@ -1,0 +1,328 @@
+/* 預覽網頁（非排版） */
+body {
+    padding: 2em;
+}
+
+/* 單元格填色 */
+.not-suggested {
+    border: 0.01em solid black;
+    background-color: #eee;
+    color: #C0504D;
+}
+.repeated {
+    border: 0.01em solid black;
+    background-color: #eee;
+    color: #00B050;
+}
+span.not-suggested, span.repeated {
+    /* 前言的填色 */
+    border: none;
+}
+
+/* 附錄 部件填色 */
+.recommended-form {color: #002060;}
+.orthography-form {color: #00B0F0;}
+.aesthetic-form {color: #538135;}
+
+/* 内容字體設置 */
+h1 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-family: var(--page-header-font);
+    bookmark-level: 1;
+    bookmark-label: content();
+}
+h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    font-family: var(--serif-header-font);
+    page-break-after: avoid;
+    bookmark-level: 2;
+    bookmark-label: content();
+}
+h3, h4 {
+    font-family: var(--serif-header-font);
+    font-size: 1em;
+    text-align: left;
+    margin-block: 0.5em;
+    page-break-after: avoid;
+}
+h3 {
+    bookmark-level: 3;
+    bookmark-label: content();
+}
+h4 {
+    bookmark-level: 4;
+    bookmark-label: content();
+}
+/* SVG圖片 */
+.picture-char {
+    display: inline;
+    height: 1em;
+    width: 1em;
+    line-height: 1em;
+    /* 根據西文基綫對齊底部，然後往下壓 */
+    vertical-align: baseline;
+    position: relative;
+    bottom: -0.12em;
+}
+
+/* 頁面内容設置 */
+section.content {
+    page-break-after: always;
+}
+section.content p {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+    text-align: justify; /* 左右對齊 */
+    hanging-punctuation: end; /* 標點懸挂（chrome暫不支持） */
+}
+
+/* 前言 */
+section#intro p {
+    margin-bottom: 1.2em; /* 段落之間空行 */
+}
+section#intro span.handwriting-form {
+    font-family: var(--intro-handwriting); /* 其他字形 */
+}
+section#intro ol#intro-collect-char-rules {
+    list-style-type: cjk-decimal;
+    line-height: 1.5em;
+    margin-bottom: 1.2em;
+    padding-left: 2em;
+}
+
+/* 目錄 */
+#toc-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+#toc-list li a {
+    color: black;
+}
+#toc-list li[data-title-level="h1"] {
+    font-family: var(--serif-header-font);
+    margin-top: 0.5em;
+}
+#toc-list li[data-title-level="h2"] {
+    font-family: var(--text-font);
+    margin-left: 2em;
+}
+#toc-list li a::after { /* 章節頁碼自動替換 */
+    content: target-counter(attr(href), page);
+    float: right;
+}
+
+/* 表格 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table tr, table td {
+    border: 0.01em solid black;
+}
+/* 表格單元格的分類標題（表三分級用） */
+table.charlist tr th.part-header {
+    background-color: #ffc;
+    color: #e26c09;
+    width: 12.5%;
+    border: 0.01em solid black;
+    font-weight: normal;
+    font-size: 2em;
+}
+/* 表格單元格 */
+table.charlist tr td {
+    text-align: center;
+    width: 12.5%;
+    height: 1.6in;
+    vertical-align: top;
+    padding: 6px 4px;
+    position: relative; /* 用於裏面的註釋號碼固定在右下角*/
+}
+table.charlist tr td span {display: block;}
+table.charlist tr td span.big5 {
+    font-family: var(--big5-value-font); /* Big5 碼用代碼字體 */
+}
+table.charlist tr td span.big5 span.hkscs{
+    font-size: 0.6em; /* HKSCS 的 H- 標簽縮小*/
+    display: inline;
+}
+table.charlist tr td span.sample-char{
+    font-size: 3em;
+    line-height: 1.4;
+    margin-bottom: -2px;
+}
+table.charlist tr td span.unicode{
+    margin-bottom: 3px;
+    font-family: var(--unicode-value-font);
+    font-feature-settings: "tnum";
+}
+
+
+/* 注釋引用標簽 */
+a.ref-tag-in-table { /* 需要上一級是 position:relative */
+    font-family: var(--reference-tag-font);
+    font-feature-settings: 'jp90'; /* 註斜點 */
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    font-size: 0.75em;
+}
+
+/* 注釋列表設置 */
+ol.endnotes li {
+    margin-bottom: 0.5em;
+}
+ol.endnotes li a.endnote-refer-back {
+    padding-inline-end: 0.25em;
+    line-height: 0.9em;
+    white-space: nowrap;
+}
+
+
+/* 附錄表格 */
+section#appendix1 table td {
+    position: relative; /* 用於裏面的註釋號碼固定在右下角*/
+    padding: 4px 6px;
+}
+section#appendix1 table#appendix1-similar-component th {
+    width: 3em; /* 組合部件標題 */
+    font-size: 1.5em;
+    font-weight: normal;
+    background-color: #ffc;
+    color: #e26c09;
+    border: 0.01em solid black;
+}
+section#appendix1 table#appendix1-individual-component td {
+    width: 25%; /* 單獨部件4個一行，25% */
+}
+section#appendix1 table p.header-component {
+    margin: 0;
+}
+section#appendix1 table p.shown-char {
+    font-size: 2em;
+    line-height: 1.08em;
+    margin: 0;
+}
+section#appendix1 table .sample-variant-char {
+    font-family: var(--variant-font);
+}
+
+
+/* 章節分類 */
+section#chap1 {
+    page: chap1;
+}
+section#chap2 {
+    page: chap2;
+}
+section#chap3 {
+    page: chap3;
+}
+section#appendix1 {
+    page: appx1;
+}
+section#endcover {
+    page: endcover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+@media print {
+    body {
+        padding: 0;
+    }
+
+    @page {
+        size: A4;
+        margin: 1in 1.214in; /* 左右盡量使漢字網格可以在12pt對齊35字 */
+
+        @bottom-center {
+            content: "頁 " counter(page);
+            vertical-align: top;
+        }
+
+        .pagedjs_margin.pagedjs_margin-top-left, .pagedjs_margin.pagedjs_margin-top-right, .pagedjs_margin.pagedjs_margin-bottom-center {
+            font: 500 10pt var(--page-header-font);
+        }
+
+        /* dot-dot-dash https://stackoverflow.com/questions/54378607/how-to-create-dash-dot-and-dash-dot-dot-lines-and-rectanges-in-css */
+        .pagedjs_margin-top {
+            padding-bottom: 0.51em;
+            background:
+            repeating-linear-gradient(to right,#000,#000 1px,transparent 1px,transparent 2px) 0 calc(100% - 0.38em)/100% 0.05em no-repeat; 
+        }
+        .pagedjs_margin-bottom {
+            padding-top: 0.4em;
+            background:
+            repeating-linear-gradient(to right,#000,#000 1px,transparent 1px,transparent 2px) 0 0.2em/100% 0.05em no-repeat;
+        }
+    }
+    @page {
+        @top-left {
+            content: "傳承字形推薦形體表";
+            vertical-align: bottom;
+        }
+    }
+    @page {  
+        @top-right {
+            content: "版本：" var(--version-number, '加載資料失敗，請刷新頁面');
+            vertical-align: bottom;
+        }
+    }
+
+    /* 不同章節的不同header */
+    @page chap1 {
+        @top-left {
+            content: "傳承字形推薦形體表（表一）";
+            vertical-align: bottom;
+        }
+    }
+    @page chap2 {
+        @top-left {
+            content: "傳承字形推薦形體表（表二）";
+            vertical-align: bottom;
+        }
+    }
+    @page chap3 {
+        @top-left {
+            content: "傳承字形推薦形體表（表三）";
+            vertical-align: bottom;
+        }
+    }
+    @page appx1 {
+        @top-left {
+            content: "傳承字形推薦形體表（附錄一）";
+            vertical-align: bottom;
+        }
+    }
+
+    @page endcover {
+        @top-left {
+            content: none;
+        }
+        @top-right {
+            content: none;
+        }
+        @bottom-center {
+            content: none;
+        }
+        .pagedjs_margin-top {
+            background: none; 
+        }
+        .pagedjs_margin-bottom {
+            background: none; 
+        }
+    }
+    
+    
+    tr, th, td {
+        page-break-inside: avoid;
+    }
+    th, td {
+        page-break-before: avoid;
+    }
+}

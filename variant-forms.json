@@ -1,0 +1,216 @@
+{
+    "--使用方式": {
+        "type": "變體種類，値爲：天（淺藍）、海（深藍）、地（綠色）",
+        "display-char": "預覽顯示的字符，可以是一串字或者用 [] 包裹一系列字符",
+        "display-pic": "預覽顯示的圖片，可以是 [] 包裹一系列圖片。使用 <img src='文件夾/文件名.svg'> 格式引入，文件名外面只能用單引號（'）",
+
+        "group-title":  "只在「形類」使用。歸類組的顯示標題，盡量用一個字/部件",
+        "components": "只在「形類」使用。把多個單部件歸類在一起",
+
+        "name": "只在「單獨」使用。顯示的部件名稱。",
+        
+        "comment": "註釋內容。只在單獨部件內使用",
+        "ref": "引用標簽，有相同ref的部件會指向相同的註釋號碼，排版後不會顯示在文檔中。只在「單獨」部件內使用",
+        
+        "注意事項": "本文件使用 JSON 格式，UTF-8 編碼。請確保使用的引號、逗號、括號是 ASCII。確保每個條目之間/之後有一個逗號（,），最後一條後面則不可以有逗號。",
+        "異體字體": "顯示異體的字型是 webfont/I.MingWebVar.otf，要添加新的異體請修改該字型文件。「形類」使用直接的 display-char 顯示正體，components下的display-char或display-pic 顯示異體；「單獨」使用 display-char 同時顯示正異體"
+    },
+    "形類": [
+        {
+            "group-title": "鼠",
+            "display-char": "巤鼠",
+            "components": {
+                "巤部件": {"type": "海", "display-char":"巤"},
+                "鼠部件": {"type": "海", "display-char":"鼠"}
+            }
+        },
+        {
+            "group-title": "艸𦬠",
+            "display-char": "葬莽𦬠",
+            "components": {
+                "葬部件": {"type": "地", "display-char":"葬"},
+                "莽部件": {"type": "地", "display-char":"莽"},
+                "𦬠部件": {"type": "地", "display-char":"𦬠"}
+            }
+        },
+        {
+            "group-title": "艸艹",
+            "display-char": "華匿茶茲艹",
+            "components": {
+                "華部件": {"type": "地", "display-char":"華"},
+                "匿部件": {"type": "地", "display-char":"匿"},
+                "茶部件": {"type": "地", "display-char":"茶"},
+                "茲部件": {"type": "地", "display-char":"茲"},
+                "艹部件": {"type": "地", "display-char":"艹"}
+            }
+        },
+        {
+            "group-title": "艸廾",
+            "display-char": "卉賁",
+            "components": {
+                "卉部件": {"type": "地", "display-char":"卉"},
+                "卉部件(在上)": {"type": "地", "display-char":"賁"}
+            }
+        },
+        {
+            "group-title": "兓",
+            "display-char": "朁兓",
+            "components": {
+                "朁部件": {"type": "海", "display-char":"朁"},
+                "兓部件": {"type": "海", "display-char":"兓"}
+            }
+        },
+        {
+            "group-title": "<span class='sample-variant-char'>𠂯</span>",
+            "display-char": "𡸁垂華崋𬀽㷸",
+            "components": {
+                "𡸁部件": {"type": "海", "display-char":"𡸁垂"},
+                "垂部件": {"type": "海", "display-pic": "<img src='var/83EF.svg'>"},
+                "華部件（崋、𬀽、㷸）": {"type": "海", "display-char": "崋𬀽㷸"}
+            }
+        },
+        {
+            "group-title": "𠙹",
+            "display-char": "𠙹畚甹",
+            "components": {
+                "𠙹部件": {"type": "天", "display-char": "𠙹畚甹"},
+                "另設字頭（畚、甹）": {"type": "地", "display-pic": ["<img src='var/755A.svg'>","<img src='var/7539.svg'>"]}
+            }
+        },
+        {
+            "group-title": "弘/𪪺",
+            "display-char": "強弘",
+            "components": {
+                "強部件": {"type": "海", "display-char":"强"},
+                "弘部件": {"type": "天", "display-char":"𪪺"}
+            }
+        },
+        {
+            "group-title": "朩",
+            "display-char": "罙呆茶",
+            "components": {
+                "罙部件": {"type": "天", "display-char":"罙"},
+                "呆部件": {"type": "天", "display-char":"呆"},
+                "茶部件": {"type": "地", "display-pic": "<img src='var/8336.svg'>"}
+            }
+        },
+        {
+            "group-title": "白",
+            "display-char": "習皆",
+            "components": {
+                "習部件": {"type": "地", "display-char":"習"},
+                "皆部件": {"type": "地", "display-char":"皆"}
+            }
+        },
+        {
+            "group-title": "丯",
+            "display-char": "憲害砉㓞",
+            "components": {
+                "憲部件": {"type": "海", "display-char":"憲"},
+                "害部件": {"type": "海", "display-char":"害"},
+                "砉部件": {"type": "海", "display-char":"砉"},
+                "㓞部件": {"type": "海", "display-char":"㓞"}
+            }
+        },
+        {
+            "group-title": "爫",
+            "display-char": "爵愛舜",
+            "components": {
+                "爵部件": {"type": "地", "display-char":"爵"},
+                "愛部件": {"type": "地", "display-char":"愛"},
+                "舜部件": {"type": "地", "display-char":"舜"}
+            }
+        },
+        {
+            "group-title": "㕣",
+            "display-char": "袞㕣",
+            "components": {
+                "袞部件": {"type": "海", "display-char":"袞"},
+                "㕣部件": {"type": "海", "display-char":"㕣"}
+            }
+        },
+        {
+            "group-title": "𡭔",
+            "display-char": "尞票𫵖",
+            "components": {
+                "尞部件": {"type": "天", "display-char":"尞"},
+                "票部件": {"type": "天", "display-char":"票"},
+                "𫵖部件": {"type": "天", "display-char":"𫵖"}
+            }
+        },
+        {
+            "group-title": "䒑",
+            "display-char": "夔茲",
+            "components": {
+                "夔部件": {"type": "海", "display-char":"夔"},
+                "茲部件": {"type": "地", "display-char":"兹"}
+            }
+        },
+        {
+            "group-title": "𠘧",
+            "display-char": "𣪊朵殳𠘧",
+            "components": {
+                "𣪊部件": {"type": "地", "display-char":"𣪊"},
+                "朵部件": {"type": "地", "display-char":"朵"},
+                "殳部件": {"type": "地", "display-char":"殳"},
+                "𠘧部件": {"type": "地", "display-char":"几"}
+            }
+        },
+        {
+            "group-title": "𠃊",
+            "display-char": "真直曷",
+            "components": {
+                "真部件": {"type": "海", "display-char":"真"},
+                "直部件": {"type": "海", "display-char":"直"},
+                "曷部件": {"type": "地", "display-char":"曷"}
+            }
+        }
+    ],
+    "單獨": [
+        {"name": "巂部件", "type": "地", "display-char":"巂"},
+        {"name": "齋部件", "type": "地", "display-char":"齋", "display-pic": "<img src='var/9F4B.svg'>"},
+        {"name": "暹部件", "type": "地", "display-char":"暹"},
+        {"name": "蔑部件", "type": "地", "display-char":"蔑"},
+        {"name": "電部件", "type": "地", "display-char":"電"},
+        {"name": "粵部件", "type": "地", "display-char":"粵"},
+        {"name": "肅部件", "type": "海", "display-char":"肅"},
+        {"name": "朝部件", "type": "海", "display-char":"朝"},
+        {"name": "敖部件", "type": "海", "display-char":"敖"},
+        {"name": "敎部件", "type": "地", "display-char":"敎"},
+        {"name": "益部件", "type": "地", "display-char":"益"},
+        {"name": "衰部件", "type": "天", "display-char":"衰"},
+        {"name": "者部件", "type": "海", "display-char":"者", "ref": "表三", "comment": "屬於微小設計差異，見《傳承字形部件檢校表》表三〈不視作部件區別之差異〉。"},
+        {"name": "甚部件", "type": "地", "display-char":"甚"},
+        {"name": "亟部件", "type": "地", "display-char":"亟"},
+        {"name": "食部件", "type": "天", "display-char":"食"},
+        {"name": "奐部件", "type": "海", "display-char":"奐"},
+        {"name": "虱部件", "type": "地", "display-char":"虱"},
+        {"name": "𫩠部件", "type": "地", "display-char":"𫩠"},
+        {"name": "朋部件", "type": "海", "display-char":"朋"},
+        {"name": "夜部件", "type": "地", "display-char":"夜"},
+        {"name": "医部件", "type": "海", "display-char":"医", "ref": "表三"},
+        {"name": "肖部件", "type": "天", "display-char":"肖"},
+        {"name": "呂/吕部件", "type": "天", "display-char":"呂"},
+        {"name": "吳部件", "type": "天", "display-char":"吳"},
+        {"name": "杀部件", "type": "海", "display-char":"杀"},
+        {"name": "寺部件", "type": "海", "display-char":"寺"},
+        {"name": "老部件", "type": "地", "display-char":"老"},
+        {"name": "耳部件", "type": "地", "display-char":"耳"},
+        {"name": "良部件(在左)", "type": "海", "display-char":"郎"},
+        {"name": "𠂢部件", "type": "地", "display-char":"𠂢"},
+        {"name": "羽部件", "type": "海", "display-char":"羽", "ref": "表三"},
+        {"name": "𠨍部件", "type": "地", "display-char":"𠨍"},
+        {"name": "以部件", "type": "海", "display-char":"以", "ref": "字理差異", "comment": "依據字理應該區分，但於實際使用時可視爲設計差忽略。"},
+        {"name": "⺲(网)部件", "type": "天", "display-char":"罒"},
+        {"name": "𥝌部件", "type": "地", "display-char":"𥝌"},
+        {"name": "尔/尓部件", "type": "海", "display-char":"尔"},
+        {"name": "主部件", "type": "海", "display-char":"主"},
+        {"name": "穴部件", "type": "地", "display-char":"穴"},
+        {"name": "癶部件", "type": "地", "display-char":"癶", "ref": "字理差異"},
+        {"name": "壬部件", "type": "地", "display-char":"壬"},
+        {"name": "勻/匀部件", "type": "地", "display-char":"勻"},
+        {"name": "夬部件", "type": "天", "display-char":"夬"},
+        {"name": "与部件", "type": "海", "display-char":"与", "ref": "表三"},
+        {"name": "𣥂部件", "type": "地", "display-char":"𣥂"}
+    ]
+}

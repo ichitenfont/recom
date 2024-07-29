@@ -1,0 +1,231 @@
+<html lang="zh-Hant">
+<head>
+    <meta name="version" content="">
+
+    <meta charset="utf-8">
+    
+    <title>《傳承字形推薦形體表》</title>
+    <meta name="author" content="I.字坊">
+    <meta name="description" content="《傳承字形推薦形體表》">
+    <meta name="keywords" content="傳承字形,inherited glyphs,五大碼,Big5,I.字坊,一點字坊,ichitenfont,推薦形體,recommended glyphs">
+
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* 引入網頁字型 */
+        @font-face {
+            /* 前言用的手寫字形 */
+            font-family: 'I.MingWebHandwriting';
+            src: url('webfont/I.MingWebHandwriting.otf');
+        }
+        @font-face {
+            /* 附錄用的異體字形 */
+            font-family: 'I.MingWebVar';
+            src: url('webfont/I.MingWebVar.otf');
+        }
+        @font-face {
+            /* big5 碼 */
+            font-family: 'Sarasa Mono CL';
+            src: url('webfont/I.Iosevka.otf'), local('Sarasa Mono CL');
+        }
+        @font-face {
+            /* unicode 碼 */
+            font-family: 'Inter';
+            src: url('webfont/Inter-Regular.woff2'), local('Inter');
+        }
+
+        :root {
+            --serif-header-font: 'TenGenMin', 'Source Han Serif K';
+            --text-font: 'I.Ming', 'Source Han Serif K', serif;
+            --variant-font: 'I.MingWebVar', 'I.MingVar';
+            --intro-handwriting: 'I.MingWebHandwriting', 'IPAmjMincho', 'Source Han Serif', serif;
+            --big5-value-font: 'Sarasa Mono CL', 'Consolas', monospace;
+            --unicode-value-font: 'Inter', 'Segoe UI', sans-serif;
+            --reference-tag-font: 'Yu Gothic UI Semibold', 'I.SHSans VF Medium', 'Segoe UI', sans-serif;
+            --page-header-font: 'Yu Gothic UI Semibold', 'I.SHSans VF Medium', 'Segoe UI', sans-serif;
+        }
+        * {
+            margin: 0;
+        }
+        html {
+            font-family: var(--text-font);
+            font-size: 12pt;
+            line-height: 1.5;
+        }
+        a, a:visited { /* 超鏈接設定 */
+            color: blueviolet;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <section id="intro" class="content">
+        <h1 lang="ko">《傳承字形推薦形體表》</h1>
+        <p>
+            不論是中國大陸還是臺灣，都曾調整印刷漢字字形，使它變成趨近楷體的筆形。大家把整形後的寫法稱爲「新字形」。有人詬病這樣做令印刷字形「認楷作母」，破壞美感，強改漢字生境。而相對的「傳承字形」或「傳承印刷字形」，通稱作「舊字形」，則指未向手寫體靠攏、未被整形之寫法。這些字形，與《康熙字典》、《說文解字》等傳統字形規範吻合，一方面較能保存漢字字源或字理，另一方面也比較美觀、比較適合版面排印的需求，兩者可謂相得益彰。即使大陸地區有「語言文字法」，把「新字形」奉爲圭臬，坊間仍有不少傳承字形愛好者。臺灣、香港、澳門及海外華僑地區，更有大量出版物、視像媒體字幕、招牌路牌等等，都以傳承字形的字型排印。傳承字形就像陽光和水般，在日常生活裏無處不在。
+        </p>
+        <p>
+            傳承字形向來有文字學學者硏訂的字樣作標準，例如《康熙字典》的字頭字樣是一個重要標準；《大漢和辭典》的字頭字樣也是。不幸的是，今天處理漢字編碼的國際組織，只盲目地着重政權或政權相關組織頒佈的官式字形，冷待過往學界心血。結果，一些政權不尊重傳統，動輒改造傳承印刷字形，它們頒佈的所謂「標準」字形就輕易橫行。不論其形體有沒錯訛、問題或自相矛盾處，都可以不費吹灰之力就列進編碼文件中，供字型製作者「遵從」製成字型。至於學人的心血結晶和刻字工匠多年的美學傳承，就慘遭一些人丟棄、攻擊、嘲弄。有些人甚至公然散佈「傳承字形沒有標準」等謊言，指鹿爲馬。
+        </p>
+        <p>
+            爲保護和發揚傳承字形，推動傳承字形推薦形體的現代標準化，我們「I.字坊編輯部」上下同寅經多年功夫，仔細對比、整理多個傳承字形的重要學界標準，先後推出《傳承字形部件檢校表》（後稱《檢校表》）、《傳承字形筆畫表》等順應現今字型製作者需求的傳承字形標準化文件。如今，我們再推出《傳承字形推薦形體表》，明列相關推薦字形對應的電腦編碼，既希望讓字型製作者使用時感到更便利、更貼心，也希望徹底堵住攻擊者的任何話柄。 
+        </p>
+        <p>
+            漢字數量龐大，以我們的人力物力，難以編訂無所不包的字表。然而我們既然已推出《檢校表》，以部件爲單位，根據字理分拆部件，應當已可處理各種漢字字形問題。我們製作本表，目的是方便字型製作者直接査得推薦字形。它只要包含日常生活裏的常用字和次常用字，已經很足夠。
+        </p>
+        <p>
+            目前世界上有多個常用漢字子集，其中好些漢字子集均收錄了大批大陸簡化字。傳承印刷字形雖然也有用於大陸簡化字的實例，但簡化字本身就是人爲地大量及大規模改變漢字形體而成，因此，大家對一般漢字的傳承字形需求明顯比對簡化字的需求大。本表從實用角度出發，暫不收錄大陸簡化字。同理，本表亦暫不收錄日本的新字體略字。可是有些簡化字或略字，跟傳統漢字環境裏的正常漢字或常見異體同形，如「个、仆、医、双、叶、吁、宝、种、糸、缶、胜、芸、达」等，本表也會收錄。
+        </p>
+        <p>
+            經權衡後，編者今以臺灣Big5碼所收錄之常用字及次常用字爲基礎，修訂個別有問題的字，補上內木一郎編製的《常用香港外字表》第 1.8 版裏的部份漢字（撇除以推薦形體統一者）及個別的附加字例，作爲本表的收字範圍，相信能滿足絕大部份使用傳統中文場合的漢字需求。
+        </p>
+        <p style="margin:0">
+            同時，本表收字主要遵從這些規則：
+        </p>
+        <ol id="intro-collect-char-rules">
+            <li>完全同形字只收錄一次。例如「好」既指美善、喜愛，亦爲「婦好」之「好」；「份」既指整體裏的一部份、量詞等，也是「彬」字的古代異體。本表不會收錄兩個「好」字或兩個「份」字。 </li>
+            <li>有不同音義的形近字分別收錄，絕不相混。例如「刊」和「刋」、「券」和「劵」、「胄」和「冑」、「苟」和「茍」、「苜」和「𥄕」、「萑」和「雈」、「栝」和「桰」、「銛」和「銽」、「朏」和「胐」等組合，前者與後者音義有別，是不同的字，本表皆分列。</li>
+            <li>異體字之間，若構形或抽象字形相似，只是當中的構件有少許形近之差異，皆以傳承字形推薦形體統一之。例如「眞」和「<span class="handwriting-form">真󠄃</span>」、「直」和「<span class="handwriting-form">直󠄄</span>」、「青」和「<span class="handwriting-form">青</span>」、「俞」和「<span class="handwriting-form">俞</span>」、「爲」和「<span class="handwriting-form">為</span>」、「敎」和「<span class="handwriting-form">教</span>」、「査」和「<span class="handwriting-form">查</span>」、「姸」和「<span class="handwriting-form">妍</span>」、「令」和「<span class="handwriting-form">令󠄂</span>」、「犮」和「<span class="handwriting-form">犮󠄂</span>」、「吿」和「<span class="handwriting-form">告</span>」、「丟」和「丢」等組合，前後兩者皆同音同義，字的構形或抽象字形也相似，只是某些地方的筆畫或寫法相異。其中，前者是傳承字形，字理佔優。後者卻只是手寫時變異而成的形體，有違傳承字形原則。因此我們俱以前者統一之。 </li>
+            <li>異體字之間，若構形明顯相異，但皆能立足於字理，則並收之。如「峰」和「峯」、「群」和「羣」、「煙」和「烟」、「麪」和「麵」、「𠝹」和「鎅」、「焰」和「燄」、「線」和「綫」、「糉」和「粽」、「雙」和「双」、「釁」和「衅」等。 </li>
+            <li>異體字之間，若構形明顯相異，但部份形體字理較薄弱，或另有原因，以致不宜取該異體，則以<span class="not-suggested">灰底暗紅色</span>標示，並以註釋說明。例如「么」宜作「幺」，「匆」宜作「怱」或「悤」，「裡」宜作「裏」等。</li>
+            <li>非全同異體字之間，即使該形體的字理較薄弱，但有已獲約定俗成的義項分化作用，我們會承認該分化。如「着、両」等字，皆有其專指義項並廣爲世人接受，我們並不主張以「著、兩」等字取代之。 </li>
+        </ol>
+        <p>
+            上述規則與Unicode「中日韓統一表意文字」收字原則相似。然而Unicode在實際收字時，不時基於「原字集分離原則」而自打嘴巴，把本應整併收錄的字，分作兩個或多個碼位。Unicode 設立「原字集分離原則」，爲的是呼應當時的技術限制，解決與既有通用字集的對應問題。但自從Unicode的漢字收錄進入擴展 A 區後，Unicode 官方已放棄「原字集分離原則」。而且今天已有異體字選擇器（Variation Sequence）、 CID 字型等技術解決對應問題，「原字集分離原則」已經過時。科技以人爲本，我們絕不應本末倒置，因爲遷就過時的技術、錯誤的碼位區分，而強行收進不符傳承字形的形體。應以字理佔優形體來整併的漢字，還是必須整併。因此本表會遵守上述規則，不會盲目依從「原字集分離原則」。 
+        </p>
+        <p>
+            我們強烈呼籲字型製作者以字理爲本，在製作傳承字形的字型時，不要盲從「原字集分離原則」這違反傳承字形原則的過時技術副產品。否則，若製作者只把「値」、「靑」、「爲」等傳承字形，放在 5024、9751、7232 這些正體（繁體）中文「事實標準」裏少用的碼位；至於正體（繁體）中文「事實標準」裏常用的碼位503C、9752、70BA，卻放置着違反傳承字形規定的「值」、「 青」、「為」等字形，只會令用戶容易踩中陷阱，誤用非傳承字形。這種做法顯然違反選擇傳承字形用戶之意願，絕不可取。
+        </p>
+        <p>
+            在本表，我們把過往Big5碼（參考事實標準的微軟CP950代碼頁，包含倚天Big5延伸中獲大眾接納的部份）以等寬字型標於漢字上方，把Unicode碼以無襯綫字型標於漢字下方。若字之上方標示減號「-」，表示該字沒有Big5碼；若字之Big5碼標示前面帶有「H-」，表示該字的Big5碼源於HKSCS；若一字下方有超過一個編碼，即Unicode 在多於一個碼位上收錄了本應整併起來的字。製作傳承字形的字型時，製作者在這些碼位上都應該放置傳承字形，不應以「原字集分離原則」爲藉口安放非傳承字形。而序跋註釋裏的字碼，若無特別說明，皆指Unicode碼。此外，Unicode 擴展B區起的漢字，至今仍有不少程式不支援，或者尚未與基本區、擴展A區的漢字取齊。因此若非必要，本表盡可能不取擴展B區及其後區域的編碼。 
+        </p>
+        <p>
+            本表所收錄的形體，皆爲我們廣泛採樣後，整理出既盡力符合字理，也獲大眾約定俗成的寫法，即傳承字形推薦形體。大家可直接以本表字形爲準繩。爲節省篇幅，本表每字只收一形，理論上即《檢校表》的深藍色者。爲了方便字型製作者查閲，編者也在本表附錄了《檢校表》中所推薦的其他異體字形，例如《檢校表》的淺藍色或綠色字形。詳細的部件原則解說可參考《檢校表》的說明。若字型製作者按這些字形製字，我們認爲亦絕無問題，只要統一相同部件的字形處理即可。至於本表尚未收錄的字，只要在本表中翻査其所從部件的字形，並按照《檢校表》的規定，即可知悉該字的傳承字形推薦形體。
+        </p>
+        <p>
+            本文檔以 <a href="https://pagedjs.org">Paged.js</a> 排版，<span id="browser-version">未知</span> 版瀏覽器渲染。
+        </p>
+    </section>
+
+    <section id="toc" class="content">
+        <h2 lang="ko">目錄</h2>
+        <ul id="toc-list">
+            <li data-title-level="h1"><a href="#chap1-header">表一：一級漢字區</a></li>
+            <li data-title-level="h2"><a href="#chap1-endnote-header">表一註釋</a></li>
+            <li data-title-level="h1"><a href="#chap2-header">表二：二級漢字區</a></li>
+            <li data-title-level="h2"><a href="#chap2-endnote-header">表二註釋</a></li>
+            <li data-title-level="h1"><a href="#chap3-header">表三：添補漢字區</a></li>
+            <!-- 此處自動生成子標題 -->
+            <li data-title-level="h2" id="toc-table3-endnote"><a href="#chap3-endnote-header">表三註釋</a></li>
+            <li data-title-level="h1"><a href="#appendix1-header">附錄一：變體部件表</a></li>
+        </ul>
+    </section>
+
+    <section id="chap1" class="content">
+        <h2 lang="ko" id="chap1-header">表一：一級漢字區</h2>
+        <p class="intro-text">
+            本區以 Big5 碼常用字區所收錄的漢字爲基礎，表後添上用來取代原 Big5 碼常用字區不恰當收字的推薦替換字。至於那些不恰當收字，考慮到 Big5 碼已是正體（繁體）中文地區的「事實標準」編碼，爲免令字型出現空窗，我們仍列於此表一中，但會以<span class="not-suggested">灰底暗紅色</span>標示。
+        </p>
+        <table id="chap1-charlist" class="charlist"></table>
+        <h3 id="chap1-endnote-header">表一註釋：</h3>
+        <ol id="chap1-endnotes" class="endnotes"></ol>
+    </section>
+
+    <section id="chap2" class="content">
+        <h2 lang="ko" id="chap2-header">表二：二級漢字區</h2>
+        <p class="intro-text">
+            本區以 Big5 碼次常用字區所收錄的漢字爲基礎，表後添上用來取代原 Big5 碼次常用字區不恰當收字的推薦替換字。考慮到 Big5 碼已是正體（繁體）中文地區的「事實標準」編碼，爲免令字型出現空窗，我們仍將不恰當收字列於此表二中，但會以<span class="not-suggested">灰底暗紅色</span>標示。重出的字則以<span class="repeated">灰底綠色</span>標示。
+        </p>
+        <table id="chap2-charlist" class="charlist"></table>
+        <h3 id="chap2-endnote-header">表二註釋：</h3>
+        <ol id="chap2-endnotes" class="endnotes"></ol>
+    </section>
+
+    <section id="chap3" class="content">
+        <h2 lang="ko" id="chap3-header">表三：添補漢字區</h2>
+        <p class="intro-text">
+            有些漢字原Big5碼並無收錄，香港中諮會頒佈了HKSCS增補區，卻收字太雜亂，含有許多錯訛字，不宜全收。同時它仍缺收一些頗有用的字。今參考內木一郎編製的《常用香港外字表》第1.8版，選出當中部份漢字，撇除宜以推薦形體統一者，並另外添上個別的附加字例，列於此表三中。
+        </p>
+        <table id="chap3-charlist" class="charlist"></table>
+        <h3 id="chap3-endnote-header">表三註釋：</h3>
+        <ol id="chap3-endnotes" class="endnotes"></ol>
+    </section>
+
+    <section id="appendix1" class="content">
+        <h2 lang="ko" id="appendix1-header">附錄一：變體部件表</h2>
+        <p class="intro-text">
+            本附錄列出《檢校表》所接受的其他異體字形。本附錄標記使用的顏色意義如下：本《推薦形體表》所使用的字形且爲《檢校表》首選的字形，以黑色標示；符合字理且廣受今天大眾約定俗成的寫法，以<span class="recommended-form">海色（深藍色）</span>標示；符合字理但在今天未必是最約定俗成的寫法，以<span class="orthography-form">天色（淺藍色）</span>標示；稍爲遷就美觀需要的常見寫法，則以<span class="aesthetic-form">地色（草葉綠色）</span>標示。詳細的部件解說請參考《檢校表》內文。
+        </p>
+
+        <h3>形似部件</h3>
+        <p>
+            本表僅按照形似的變體部件歸類在一起。部份部件在更換爲其他異體後可能會導致字源混淆，但是如果字型製作者有合適的原因考量使用異體，編者認爲亦可接受，只要同一部件皆作相同處理即可。
+        </p>
+        <table id="appendix1-similar-component"></table>
+
+        <h3>單獨部件</h3>
+        <table id="appendix1-individual-component"></table>
+
+        <h3>註釋</h3>
+        <ol id="appendix1-individual-component-endnotes" class="endnotes"></ol>
+    </section>
+
+    <section id="endcover">
+        <div style="width: max-content; position: absolute; bottom: 0; left: 0; right: 0; margin: 0 auto;">
+            <h1 style="font-size: 1em; text-align: left;">《傳承字形推薦形體表》</h2>
+            <span>主編撰：內木一郎</span><br>
+            <span>字表製作：夜煞之樂、陳輝恒</span><br>
+            <span>聯合編撰：陳輝恒、李爾樅、鍾啟堯</span><br>
+            <span>編務協助：陳志泓、佟藍歌、伍梓豪</span><br>
+            <span id="version">版本：</span><br>
+            <span>初版日期：2019 年 7 月 18 日</span><br>
+            <span id="edit-date">修訂日期：</span><br>
+            <br>
+            <span>本作品以 <a href="https://creativecommons.org/licenses/by/4.0/">共享創意-署名4.0授權協議</a> 授權。</span>
+        </div>
+    </section>
+</body>
+
+
+<script type="module">
+import BrowserDetector from './js/browser-dtector.js';
+import {parseContentData, parseAppendixData} from './index.js';
+
+// 文件進行排版
+window.PagedConfig = {
+    auto: false,
+    after: () => {
+        class PopupHandler extends Paged.Handler {
+            afterRendered(pages) {
+                // 在完成排版後提示完成
+                alert(`排版完成，共有 ${pages.length} 頁。`);
+                
+                // 準備打印成PDF
+                // window.print()
+            }
+        }
+        // 注冊提示例程
+        window.Paged.registerHandlers(PopupHandler);
+
+        // 檢查瀏覽器版本
+        const browser_info = new BrowserDetector(window.navigator.userAgent).parseUserAgent();
+        document.getElementById("browser-version").innerText = browser_info["name"] + " " + browser_info["shortVersion"];
+
+        // 下載文件和排版
+        Promise.allSettled([
+            fetch("recommended-char-list.json")
+                .then(response => response.json())
+                .then(parseContentData),
+            fetch("variant-forms.json")
+                .then(response => response.json())
+                .then(parseAppendixData)
+        ])
+        // 才進行預覽
+        .then(() => {window.PagedPolyfill.preview();})
+        .catch((reason) => {alert("加載失敗，請刷新重試："+reason.toString())})
+    }
+}
+
+</script>
+<script defer src="./js/paged.polyfill.min.js"></script>
+
+</html>

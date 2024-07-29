@@ -1,6 +1,6 @@
 # 傳承字形推薦形體表——網頁排版源文件
 
-本倉庫用於存放和托管《傳承字形推薦形體表》的網頁排版源文件。訪問本倉庫對應的 [GitHub Pages 網頁]()可以在瀏覽器內排版渲染《傳承字形推薦形體表》的 PDF 文件。
+本倉庫用於存放和託管《傳承字形推薦形體表》的網頁排版源文件。訪問本倉庫對應的 [GitHub Pages 網頁](https://ichitenfont.github.io/recom)可以在瀏覽器內排版渲染《傳承字形推薦形體表》的 PDF 文件。
 
 本文檔使用 [Paged.js](https://pagedjs.org) 排版。使用 Chrome 123+ 版的排版效果最佳，因爲 Chrome 123 版起開始默認啓用 CSS 標點擠壓，較爲貼近舊版《傳承字形推薦形體表》1.04 版使用 Microsoft Word 排版的效果。
 
@@ -9,7 +9,7 @@
 此處的 `本地` 指的是當前使用的電腦終端。
 
 * `index.html`：排版顯示的網頁。固定文本（如前言、作者、各表標題等）都在這個文件編寫。也負責導入其他文件。
-* `index.css`：定義網頁顯示效果，例如頁眉頁脚、字表格式等。
+* `index.css`：定義網頁顯示效果，例如頁眉頁腳、字表格式等。
 * `index.js`：排版邏輯，引入純文本的 JSON 文件來進行排版。
 * `recommended-char-list.json`：字表的純文本 JSON 文件。格式如下節所述。
 * `variant-forms.json`：〈附錄一：變體部件表〉的純文本 JSON 文件。格式如下節所述。
@@ -32,7 +32,7 @@
 
 ## 字表格式：`recommended-char-list.json`
 
-此表用於排版〈表一：一級漢字區〉、〈表二：二級漢字區〉和〈表三：添補漢字區〉，使用 [JSON 格式](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/JSON)，屬於純文本格式。使用的格式大致如下：
+此表用於排版〈表一：一級漢字區〉、〈表二：二級漢字區〉和〈表三：添補漢字區〉，使用 [JSON 格式](https://developer.mozilla.org/zh-TW/docs/Learn/JavaScript/Objects/JSON)，屬於純文本格式。使用的格式大致如下：
 
 ```json
 {
@@ -189,7 +189,7 @@
 
 本倉庫源文件（除了 `webfont/` 內的字型文件）和其衍生品《傳承字形推薦形體表》 PDF 皆以 [共享創意-署名4.0授權協議](https://creativecommons.org/licenses/by/4.0/) 授權。
 
-`webfont/` 內的字型文件以各自的字型授權使用。`I.Iosevka` 及 `Inter` 以 SIL OFL 授權，`I.MingWebVar` 以 IPA開放字型授權協議 1.0版授權。
+`webfont/` 內的字型文件以各自的字型授權使用。`I.Iosevka` 及 `Inter` 以 SIL OFL 1.1 版授權，`I.MingWebVar` 及 `I.MingWebWriting` 以 IPA開放字型授權協議 1.0 版授權。
 
 [`pagedjs` 0.4.3](https://www.npmjs.com/package/pagedjs) 及 [`browser-dtector` 4.1.0](https://www.npmjs.com/package/browser-dtector) 爲冷凍的引用模塊，以 MIT 授權使用。
 
